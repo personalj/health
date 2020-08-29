@@ -1,0 +1,83 @@
+.footer {
+    overflow: hidden;
+    position: relative;
+    @include liner-blue;
+    padding: 105px 0;
+    color: #ffffff;
+    &__wrap {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    &__list {
+        @include flex-features;
+        margin-left: 15px;
+        margin-right: 15px;
+        justify-content: space-between;;
+    }
+    &__item-elem {
+        width: 18.3%;
+        padding-left: 15px;
+        padding-right: 15px;
+        &:first-child {
+            width: 44%;
+        }
+    }
+    &__logo {
+        margin-bottom: 20px;
+        & .logo__symb {
+            background: #ffffff;
+            color: $blue-color;
+        }
+        & .logo__text {
+            color: #ffffff;
+        }
+    }
+    &__descr {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 35px;
+    }
+    &__copywrite {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    &__item-title {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    &__item {
+        margin-bottom: 20px;
+    }
+    &__link {
+        font-weight: 300;
+        font-size: 18px;
+        transition: transform .3s;
+        color: #ffffff;
+        display: inline-block;
+        &:hover {
+            transform: scale(.9);
+        }
+    }
+    &__elem-cube {
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+    }
+}
+.btn-top {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    background: url(../img/content/top.svg) 50% 50% no-repeat;
+    position: fixed;
+    bottom: 40px;
+    right: 15px;
+    z-index: 10;
+    background-size: cover;
+    transition: .3s;
+}

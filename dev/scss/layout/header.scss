@@ -1,0 +1,115 @@
+.header {
+    &__inner {
+        @include flex-features;
+        max-width: 1241px;
+        margin: 0 auto;
+        padding: 56px 0;
+    }
+    &__nav {
+        margin-left: auto;
+    }
+}
+.logo {
+    @include flex-features;
+    align-items: center;
+    &__symb {
+        width: 41px;
+        height: 41px;
+        border-radius: 50%;
+        position: relative;
+        background: $blue-color;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 41px;
+        color: #ffffff;
+        text-align: center;
+        margin-right: 12px;
+    }
+    &__text {
+        font-weight: bold;
+        font-size: 24px;
+        color: #233348
+    }
+}
+.nav {
+    &__list {
+        @include flex-features;
+    }
+    &__item {
+        margin-right: 45px;
+        &:hover .nav__link {
+            color: #1F1534;
+        }
+        &.active .nav__link {
+            color: #1F1534;
+        }
+    }
+    &__link {
+        color: $gray-color;
+        transition: color .3s;
+    }
+}
+.nav__burger {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    height: 30px;
+    width: 30px;
+    top: 50px;
+    padding: 20px;
+    background: #ffffff;
+    right: 23px;
+    z-index: 100;
+    border-radius: 50%;
+    border: 1px solid #f0f0f0;
+}
+.nav__burger-icon {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 2px;
+    background: #2f3133;
+}
+.nav__burger-icon:before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background: #2f3133;
+    right: 0;
+    transition: .3s;
+    top: -5px;
+}
+.nav__burger-icon:after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: #2f3133;
+    right: 0;
+    transition: .3s;
+    bottom: -5px;
+}
+.nav .nav__list.active {
+    display: block;
+    width: 50%;
+}
+.nav__burger.active .nav__burger-icon {
+    background: transparent;
+}
+.nav__burger.active .nav__burger-icon:before {
+    content: '';
+    -ms-transform: rotate(45deg);
+    transform: rotateZ(45deg);
+    top: 0;
+    width: 100%;
+}
+.nav__burger.active .nav__burger-icon:after {
+    content: '';
+    -ms-transform: rotate(-45deg);
+    transform: rotateZ(-45deg);
+    top: 0;
+    width: 100%;
+}

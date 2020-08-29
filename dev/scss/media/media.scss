@@ -1,0 +1,98 @@
+@media (max-width: 992px) {
+    .header .nav__burger {
+        display: block;
+    }
+    .nav .nav__list {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 10;
+        height: 100%;
+        padding: 20px 10px;
+        background: #000000;
+        display: none;
+        & .nav__item {
+            margin-bottom: 20px;
+        }
+        & .nav__item.active .nav__link {
+            color: $blue-color;
+        }
+        & .nav__link {
+            color: #ffffff;
+            &:hover {
+                color: $blue-color;
+            }
+        }
+    }
+    .page-body .info {
+        padding: 100px 0;
+    }
+    .page-body .info__item-left, .page-body .info__item-right, .page-body .info__descr {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .page-body .info__item  {
+        margin-top: 50px;
+    }
+    .page-body .testimonials__item {
+        padding: 0 25px;
+    }
+    .page-body .testimonials__item-left, .page-body .testimonials__item-right {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .page-body .testimonials__item-left {
+        flex-direction: column;
+    }
+    .page-body .testimonials {
+        margin-bottom: 100px;
+    }
+    .page-body .articles  {
+        padding-bottom: 100px;
+    }
+    .page-body .articles__item {
+        width: 100%;
+    }
+    .page-body .articles__item-heading, .page-body .articles__item-text {
+        max-width: 100%;
+        margin: 20px;
+    }
+    .page-wrapper .footer__wrap {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+@media (max-width: 786px)  {
+    .page-body .services__item {
+        width: 50%;
+    }
+    .page-body .testimonials__prev.swiper-button-prev, .page-body .testimonials__next.swiper-button-next {
+        display: none;
+    }
+    .page-wrapper .footer__item-elem {
+        width: 100%;
+        margin: 10px 0;
+        width: 100%;
+    }
+    .page-wrapper .footer__item-elem:first-child {
+        width: 100%;
+    }
+
+}
+@media (max-width: 587px) {
+    .page-body .hero__left, .page-body .hero__right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .page-body .services__item {
+        width: 100%;
+    }
+    .page-body .services__item-inner {
+        max-width: 100%;
+    }
+   
+}
